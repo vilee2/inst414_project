@@ -4,7 +4,30 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Analysis of race and overweight status
+## WIC Overweight Prevalence Analysis
+This project examines the prevalence of overweight status among White and Indigenous participants in the WIC (Women, Infants, and Children) program using national survey data. The goal is to explore racial disparities in overweight prevalence. The analysis compares a baseline model: a simple, unadjusted linear regression of overweight prevalence on race. The primary model in the analysis is a weighted linear regression adjusted for sample sizes. 
+
+### Data
+Source: National Survey of WIC Participants at the Food and Nutrition Service of the U.S. Department of Agriculture.
+Population: White and Indigenous (American Indian/Alaska Native) WIC participants across the U.S. and territories.
+Variables used: 
+-Race (White, Indigenous)
+-Percentage of overweight WIC toddlers
+-Sample sizes for weighting
+Key variables, such as age and sex, are missing from this analysis due to the dataset structure, where individual overweight percentages are calculated for each category within a variable and cannot be analyzed with other variables. Each observation in the dataset represents a WIC program site. 
+
+### Methods
+1. Data Cleaning: Filtered for White and Indigenous participants. Renamed columns to be more intuitive. Checked for missing values and dropped them as necessary. Dropped duplicates in dataset. Relabeled values to be more intuitive. Turned race into a boolean variable for easier analysis.
+2. Modeling: Baseline model - unadjusted linear regression of overweight prevalence on race. Primary model - weighted linear regression adjusting for sample sizes
+3. Comparison: Baseline model provides a benchmark for comparison. Primary model accounts for differing sample sizes and provides more reliable estimates.
+
+### Findings
+Baseline indicates a preliminary difference in overweight prevalence between White and Indigenous participants. Weighting by sample size in the primary model alters the estimates slightly by increasing the effect of the coefficient (Indigenous) and intercept (Overweight prevalence for White participants). 
+#### Limitations
+Potential confounders are not included. Sample may not be fully representative or generalizable to all children in the U.S. Temporal trends or regional variation were not considered. 
+
+### Future Directions
+Incorporate additional variables of interest. Consider longitudinal trends, if possible. Consider other modeling approaches. 
 
 ## Project Organization
 
