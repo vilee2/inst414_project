@@ -30,6 +30,8 @@ Potential confounders are not included. Sample may not be fully representative o
 Incorporate additional variables of interest. Consider longitudinal trends, if possible. Consider other modeling approaches. 
 
 ## Project Organization
+Open the **VISUALIZATIONS** folder to see all visualizations produced during the analysis. 
+Open the **CODE NOTEBOOKS FOR SPRINT 2 AND 3** folder to see the code notebooks for sprint 2 and sprint 3 submissions
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
